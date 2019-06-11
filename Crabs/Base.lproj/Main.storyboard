@@ -21,7 +21,7 @@
                         <viewLayoutGuide key="safeArea" id="Bsa-tE-W4E"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="4Au-js-Xd8">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="9vw-Ho-Qyr">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="9vw-Ho-Qyr">
                             <connections>
                                 <segue destination="kdt-qN-8e8" kind="show" id="it9-Cs-EEf"/>
                             </connections>
@@ -32,18 +32,32 @@
             </objects>
             <point key="canvasLocation" x="1645" y="-729"/>
         </scene>
-        <!--Title-->
+        <!--View Controller-->
         <scene sceneID="YBZ-IM-Cqy">
             <objects>
                 <viewController id="kdt-qN-8e8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6LG-vc-o0o">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7Y-9R-r2b">
+                                <rect key="frame" x="144.5" y="419.5" width="125" height="57.5"/>
+                                <string key="text">Tap to move
+the crab</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="B7Y-9R-r2b" firstAttribute="centerX" secondItem="6LG-vc-o0o" secondAttribute="centerX" id="3HR-4c-HbS"/>
+                            <constraint firstItem="B7Y-9R-r2b" firstAttribute="centerY" secondItem="6LG-vc-o0o" secondAttribute="centerY" id="PFD-2f-q65"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oY2-RU-OOt"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="M1U-6T-E7D">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Wcw-5T-92n">
+                    <navigationItem key="navigationItem" id="M1U-6T-E7D">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="Wcw-5T-92n">
                             <connections>
                                 <segue destination="nQ2-Yz-9I5" kind="show" id="igl-ao-KU3"/>
                             </connections>
@@ -54,21 +68,38 @@
             </objects>
             <point key="canvasLocation" x="2432" y="-729"/>
         </scene>
-        <!--Title-->
+        <!--View Controller-->
         <scene sceneID="jSs-Vb-kmd">
             <objects>
                 <viewController id="nQ2-Yz-9I5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3YX-AS-Y4b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S24-1t-SGJ">
+                                <rect key="frame" x="154.5" y="433.5" width="105" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="S24-1t-SGJ" firstAttribute="centerX" secondItem="3YX-AS-Y4b" secondAttribute="centerX" id="FG0-Vg-Acq"/>
+                            <constraint firstItem="S24-1t-SGJ" firstAttribute="centerY" secondItem="3YX-AS-Y4b" secondAttribute="centerY" id="SbI-XJ-IdF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dIK-vD-Ldq"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="NN1-2H-XPv">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="fd3-ab-2fy"/>
+                    <navigationItem key="navigationItem" id="NN1-2H-XPv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fd3-ab-2fy">
+                            <connections>
+                                <action selector="done:" destination="eTP-f3-qNQ" id="g67-WU-ePd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6m-oQ-VVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="eTP-f3-qNQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3328" y="-729"/>
         </scene>
@@ -79,6 +110,12 @@
                     <view key="view" contentMode="scaleToFill" id="UQV-pU-fIC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4RY-6C-y53">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jFM-PN-UzI"/>
                     </view>
@@ -96,7 +133,52 @@
                     <view key="view" contentMode="scaleToFill" id="99D-w6-Exv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Tg0-cc-RVB">
+                                <rect key="frame" x="156.5" y="413" width="101.5" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Xu-Ul-BRl">
+                                        <rect key="frame" x="0.0" y="0.0" width="101.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5W-aI-Yy7">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t0v-cY-bAv">
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleRoll:" destination="s9p-Rw-Ood" eventType="valueChanged" id="g4P-1U-6bH"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8hm-t2-bx1">
+                                        <rect key="frame" x="0.0" y="39" width="101.5" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2U-hF-IlE">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JCj-4o-odz">
+                                                <rect key="frame" x="52.5" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="toggleZoom:" destination="s9p-Rw-Ood" eventType="valueChanged" id="eWP-aT-ndk"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tg0-cc-RVB" firstAttribute="centerX" secondItem="99D-w6-Exv" secondAttribute="centerX" id="4LY-go-Xtd"/>
+                            <constraint firstItem="Tg0-cc-RVB" firstAttribute="centerY" secondItem="99D-w6-Exv" secondAttribute="centerY" id="b74-cE-Hf4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2vy-Qy-DEb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="LLE-Kz-nfJ"/>
